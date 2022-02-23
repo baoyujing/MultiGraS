@@ -49,26 +49,31 @@ We follow [Text Summarization with Pretrained Encoders](https://github.com/nlpya
 Following previous works, we use ```ROUGE-1.5.5``` to evaluate the model. 
 For efficiency, we use ```pyrouge``` to calculate ROUGE scores when extracting oracles.
 
-1. *Download ROUGE-1.5.5*
+1. *Download ROUGE-1.5.5 [here](https://github.com/andersjo/pyrouge/tree/master/tools/ROUGE-1.5.5)*
 
-```<https://github.com/andersjo/pyrouge/tree/master/tools/ROUGE-1.5.5>```\
 ```export ROUGE_EVAL_HOME="/absolute_path_to/ROUGE-1.5.5/data/"```
 
 2. *Install Perl Packages*
 
-```sudo apt-get install perl```\
-```sudo apt-get update```\
-```sudo cpan install XML::DOM```
+```
+sudo apt-get install perl
+sudo apt-get update
+sudo cpan install XML::DOM
+```
 
 3. *Remove files to avoid ERROR of the .db files*
 
-```rm WordNet-2.0.exc.db```\
-```./WordNet-2.0-Exceptions/buildExeptionDB.pl ./WordNet-2.0-Exceptions ./smart_common_words.txt ./WordNet-2.0.exc.db```
+```
+rm WordNet-2.0.exc.db
+./WordNet-2.0-Exceptions/buildExeptionDB.pl ./WordNet-2.0-Exceptions ./smart_common_words.txt ./WordNet-2.0.exc.db
+```
 
 4. *Install ```pyrouge```*
 
-```pip install pyrouge```\
-```pyrouge_set_rouge_path /absolute_path_to/ROUGE-1.5.5/```
+```
+pip install pyrouge
+pyrouge_set_rouge_path /absolute_path_to/ROUGE-1.5.5/
+```
 
 ### 4. *Others*
 We use [GloVe](https://nlp.stanford.edu/projects/glove/) embeddings as the initial word embeddings.

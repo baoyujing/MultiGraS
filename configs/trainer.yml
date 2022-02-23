@@ -3,4 +3,4 @@ n_epoch: 5
 save_root: "./ckpts"
 pretrained_path: "./ckpts/0.ckpt"
 cuda: True
-cnn_eval_path: "./data/dataset_processed/cnn_dailymail/split/cnn_test.txt"
+cnn_eval_path: "./data/dataset_processed/cnn_dailymail/split/cnn_val.txt"

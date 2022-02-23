@@ -4,7 +4,4 @@ pad_token: "[PAD]"
 pad_id: 0
 unk_token: "[UNK]"
 unk_id: 1
-start_token: "[START]"
-start_id: 2
-stop_token: "[STOP]"
-stop_id: 3
+

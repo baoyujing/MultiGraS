@@ -65,15 +65,11 @@ class Vocabulary:
     def default_configs():
         return {
             "vocabulary_path": "../dataset_processed/cnn_dailymail/vocabulary.txt",
-            "max_size": 20000,
+            "max_size": 50000,
             "pad_token": "[PAD]",
             "unk_token": "[UNK]",
-            "start_token": "[START]",
-            "stop_token": "[STOP]",
             "pad_id": 0,
             "unk_id": 1,
-            "start_id": 2,
-            "stop_id": 3,
         }
 
 

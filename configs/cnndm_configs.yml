@@ -1,0 +1,21 @@
+# dataset
+data_root: "../data/cnn_dailymail"
+cnn_story_path: "./cnn/stories"
+dm_story_path: "./dailymail/stories"
+
+# split
+split_root: "../data/cnn_dailymail/split"
+all_train_path: "all_train.txt"
+all_val_path: "all_val.txt"
+all_test_path: "all_test.txt"
+
+# save
+save_root: "../data/dataset_processed/cnn_dailymail"
+
+# others
+n_process: 5
+oracle_size_summary: 3
+max_n_sents: 50
+max_n_words: 100
+stop_words_path: "../data/stop_words.txt"
+min_df: 100

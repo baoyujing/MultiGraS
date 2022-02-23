@@ -1,0 +1,17 @@
+batch_size: 32
+n_workers: 12
+shuffle: True
+
+dataset:
+  root: "./data/dataset_processed/cnn_dailymail"
+  file_folder: "files"
+  split_folder: "split"
+  train_path: "train.txt"
+  val_path: "val.txt"
+  test_path: "test.txt"
+
+packer:
+  doc_max_len: 50
+  doc_sent_max_len: 100
+  sum_max_len: 10
+  sum_sent_max_len: 50

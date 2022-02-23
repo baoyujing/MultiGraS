@@ -1,0 +1,16 @@
+doc_max_len: 50
+sent_max_len: 100
+lstm_layer: 2
+bidirectional: True
+dim_hidden: 300
+pool: "max"
+
+emb:
+  emb_path: "./data/pretrained_embeddings/glove.42B.300d.txt"
+  dim_emb: 300
+  train: False
+
+mgcn:
+  dim_hidden: 300
+  n_networks: 2
+  n_layers: 2

@@ -17,7 +17,7 @@ Baoyu Jing, Zeyu You, Tao Yang, Wei Fan and Hanghang Tong [Multiplex Graph Neura
 Packages can be installed via: ```pip install -r requirements.txt```
 
 
-## Preparation
+## Data Preparation
 The preprocessed CNN/DailyMail dataset can be downloaded [here](https://www.dropbox.com/s/c4u6m03m43sgc7h/cnn_dailymail_processed.zip?dl=0).
 If you would like to process the raw data by yourself, please follow the instructions below.
 
@@ -48,7 +48,12 @@ The ```natural connection``` graph for sentences are constructed based on their 
 
 We follow [Text Summarization with Pretrained Encoders](https://github.com/nlpyang/PreSumm), and greedily select the sentences within the documents, which have the highest ROUGE scores, as oracles.
 
-### 3. *ROUGE Package*
+### 3. *Others*
+We use [GloVe](https://nlp.stanford.edu/projects/glove/) embeddings as the initial word embeddings.
+Since we use different numbers of the extracted sentences as summaries for CNN and DailyMail, we need to know whether a document is from CNN or DailyMail during evaluation.
+Therefore, you need to run ```cnn_split.py``` to obtain the split files of CNN.
+
+## ROUGE Package
 Following previous works, we use ```ROUGE-1.5.5``` to evaluate the model. 
 For efficiency, we use ```pyrouge``` to calculate ROUGE scores when extracting oracles.
 
@@ -77,11 +82,6 @@ rm WordNet-2.0.exc.db
 pip install pyrouge
 pyrouge_set_rouge_path /absolute_path_to/ROUGE-1.5.5/
 ```
-
-### 4. *Others*
-We use [GloVe](https://nlp.stanford.edu/projects/glove/) embeddings as the initial word embeddings.
-Since we use different numbers of the extracted sentences as summaries for CNN and DailyMail, we need to know whether a document is from CNN or DailyMail during evaluation.
-Therefore, you need to run ```cnn_split.py``` to obtain the split files of CNN.
 
 ## Training
 1. Specify the configurations in ```model.yml```, ```dataloader.yml```, ```trainer.yml``` and ```vocabulary.yml```.

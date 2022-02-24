@@ -18,6 +18,9 @@ Packages can be installed via: ```pip install -r requirements.txt```
 
 
 ## Preparation
+The preprocessed CNN/DailyMail dataset can be downloaded [here](https://www.dropbox.com/s/c4u6m03m43sgc7h/cnn_dailymail_processed.zip?dl=0).
+If you would like to process the raw data by yourself, please follow the instructions below.
+
 ### 1. *Dataset*
 The raw data for ```CNN/Daily_Mail``` can be downloaded from <https://cs.nyu.edu/~kcho/DMQA/>. 
 Data splits can be downloaded from <https://github.com/abisee/cnn-dailymail>, which is already included in this repository.
